@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Salipa-Gurung/Assignments#readme",
   "dependencies": {
+    "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
     "node-fetch": "^3.2.10",
     "prompt-sync": "^4.2.0"
   }

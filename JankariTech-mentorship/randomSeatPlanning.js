@@ -17,12 +17,13 @@ function randomSeatGenerator(){
     }
 
     for(let i = 0; i < total; i++) {
-        const randomNo = Math.floor(Math.random() * total);  //Generating random number (from 0 to total-1)
-        const temp = studentName[randomNo];
-
-        // checking if person is already assigned to seats
-        if(!(seatNo.includes(temp))) {
-            seatNo[i] = temp; //assigning a person to a seatNo of index i
+        while(!seatNo[i]){
+            const randomNo = Math.floor(Math.random() * total);  //Generating random number(from 0 to total-1)
+    
+            // checking if person is already assigned to seats
+            if(!(seatNo.includes(studentName[randomNo]))) {
+                seatNo[i] = studentName[randomNo]; //assigning a person to a seatNo of index i
+            }
         }
     }
     // loop to output all random seat  

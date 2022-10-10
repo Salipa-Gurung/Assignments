@@ -8,13 +8,15 @@ function randomSeatGenerator(){
     const total = prompt('Enter total number of students: '); //for array size of seat and studentName
 
     // creating array of size -> total
-    const studentName = new Array(total);
-    const seatNo = new Array(total);
+    const studentName = new Array();
+    const seatNo = new Array();
 
     // loop for asking names
     for(let i = 0; i < total; i++) {
         studentName [i] = prompt('Enter Name: ');
     }
+
+    console.log(studentName);
 
     for(let i = 0; i < total; i++) {
         while(!seatNo[i]){
@@ -26,6 +28,8 @@ function randomSeatGenerator(){
             }
         }
     }
+
+    console.log(seatNo);
     // loop to output all random seat  
     console.log("---------------Shuffled Seat--------------");
     for(let i = 0; i < total; i++){

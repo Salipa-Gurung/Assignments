@@ -11,8 +11,8 @@ async function returnAge(argName) {
 
     // Object destructuring to extract name and age
     const { age, name } = result;
-    console.log(`Age of ${name} is : `, age);
-    // return { age:age, name:name };
+    // console.log(`Age of ${name} is : `, age);
+    return { age: age, name: name };
   } catch (err) {
     console.log(err);
   }
@@ -20,8 +20,8 @@ async function returnAge(argName) {
 
 // Window object is not defined in node.js environment(Vs code) so to use prompt-->
 const prompt = promptSync();
-var name = prompt("Enter name : ");
+var inputName = prompt("Enter name : ");
 
-returnAge(name);
-// const { age, name } = await returnAge(inputName);
-// console.log(`Age of ${name} is : `, age);
+// returnAge(name);
+const { age, name } = await returnAge(inputName);
+console.log(`Age of ${name} is : `, age);
